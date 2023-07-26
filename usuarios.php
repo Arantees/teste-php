@@ -1,3 +1,8 @@
+
+<?php 
+    require('header.php');
+?>
+
 <?php
 // maneira que o php importa o arquivo do BD.
 require_once('db.php');
@@ -10,51 +15,39 @@ $result = mysqli_query($conexao, $query);
 
 // Ler todos os resultados da consulta
 $rows = mysqli_fetch_all($result, MYSQLI_ASSOC);
-var_dump($rows);
+// var_dump($rows);
 ?>
 
-<html>
+<!-- verificar se retornou os registros do BD -->
+    <?php if (count($rows)): ?>
 
-<head>
-    <meta charset="utf-8" />
-    <title>Curso PHP</title>
-</head>
-
-<body>
-    <br>
-    <?php if (count($rows)): ?>       
-
-      <table> 
+        <table>
             <tr>
-                <td> Usuarios cadastrados </td>
+                <th> Usuarios cadastrados </th>
+                <th>Senha</th>
+                <th colspan="2"> Ações </th>
             </tr>
             <?php foreach ($rows as $row): ?>
                 <tr>
-                    <td> <?= $row['name'] ?></td>
+                    <td>
+                        <?= $row['name'] ?>
+                    </td>
+                    <td>
+                        <?= $row['password'] ?>
+                    </td>
                     <td> <a href="form.php?id=<?= $row['id'] ?>"> Editar </a> </td>
                     <td> <a href="delete.php?id=<?= $row['id'] ?>"> Apagar </a> </td>
                 </tr>
-               <?php endforeach ?> 
+            <?php endforeach ?>
         </table>
-
     <?php else: ?>
-
         <p>Não possui bloco de código</p>
-
     <?php endif ?>
+    <!-- redereciona para tela de cadastro -->
+    <a href="form.php">Cadastrar</a>
+    <a href="index.php">Home</a>
 
 
-    <br>
-
-    <?= 'utilizando a tag de impressao' ?>
-
-    <br>
-
-    <? 'utilizando a tag de curta' ?>
-
-
-    <a href="form.php">Nova Entidade</a>
-    <a href="delete.php?id=1">Apagar</a>
-</body>
-
-</html>
+    <?php 
+        require('footer.php');
+    ?>
