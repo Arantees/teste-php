@@ -1,0 +1,237 @@
+/* Cabeçalho */
+header{
+    background-color: #ccc;
+    height: 130px;
+    }
+     .mt-5{
+        margin-top: 50%;
+     }
+     .titulo{
+        font-size: 3rem;
+     }
+     .tituloVerde{
+        color: #00bf63;
+     }
+    
+    .btn{
+        color: black !important;
+        font-family: 'Franklin Gothic Medium';
+        font-size: x-large !important;
+        border-radius: 100px !important;
+        height: 50px;
+        width: 200px;
+        background-color: #00bf63;
+        margin-top: 5%;
+    }
+    section{
+        margin-top: 5%;;
+    }
+    section h1{
+        font-family:'Franklin Gothic Medium';
+    }
+    .container {
+        margin: auto;
+        text-align: center;
+        align-items: center;
+    }
+    
+    section p {
+        font-size: 1.3rem;
+    }
+    button{cursor: pointer;}
+    
+    .botoes button{
+        margin: 20px 50px 10px 10px;
+        border-radius: 25px;
+        height: 115px;
+        width: 115px;
+        background-color: blue;
+        color: white;
+    }
+    .navbar-light .navbar-nav .nav-link{
+        color: black;
+    }
+    
+    .navCor{
+        background-color: #ccc;  
+        
+    }
+    
+    .tamanhoTexto{
+        font-size: 2rem;
+    }
+    
+    .quadradoVerde {
+        background-color: #00bf63;
+        color: black;
+        border-radius: 3rem;
+        padding: 2rem;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+    }
+    
+    .imgGrampo{
+        transform: rotate(40deg);
+    }
+    .imgLivro {
+        transform: rotate(-10deg);
+    }
+    
+    .buttonFaculdades button{
+        border-radius: 1rem;
+        background-color: #00bf63;
+        margin-top: 1rem;
+    }
+    
+    .text-black{
+        color: black; 
+        font-weight: bold; 
+        font-size: 1.1em;
+    }
+    
+    body{
+        font-family: 'League Spartan', sans-serif !important;
+        background-color: #ccc !important;
+        image-rendering: auto;
+    }
+    
+    ::after{
+        color: black;
+    }
+    
+    /* Imagens */
+    #Grampos{
+        background-color: #ccc;
+        width: 150px;
+        float: left;
+        bottom: 0;
+    }
+    #Livro{
+        background-color: #ccc;
+        float: right;
+        margin-top: 5%;
+        width: 200px;
+    }
+    /*fim imagens*/
+    
+    /*Português*/
+    .alternativa{
+        font-family:'arial';
+        text-align: justify;
+    }
+    .alternativa button {
+        border-radius: 100%;
+        padding: 15px;
+        border: 3px;
+    }
+    
+    #correta :active {
+        background-color: lime !important;
+        border: 3px;
+    
+    }
+    #false :active {
+        background-color: red !important;
+        border: 3px;
+    
+    }
+    
+    
+    /*footer*/  
+    footer {
+        background: black;
+        padding: 50px 0 20px 0;
+        position: relative;
+    }
+    footer h4 {
+        color: #919496;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+    }
+    footer .navbar-nav a {
+        color: white;
+        font-size: 1.1rem;
+    }
+    footer .navbar-nav a:hover {
+        color: #9bf0e1;
+        text-decoration: none;
+    }
+    footer ul {
+        list-style: none;
+    }
+    footer ul li {
+        float: right;
+        margin: 0 5px;
+        
+    }
+    
+    center {
+        text-align: center;
+    }
+    /*Fim do footer*/
+    
+    /*
+    #Português:hover{
+        background-color: rgb(255, 79, 79);
+    }
+    #Matemática:hover{
+        background-color: rgb(70, 70, 255);
+    }
+    #História:hover{
+        background-color: rgb(255, 255, 68);
+    }#Biologia:hover{
+        background-color: rgb(0, 255, 0);
+    }#Química:hover{
+        background-color: rgb(172, 3, 172);
+    }#Física:hover{
+        background-color: rgb(255, 176, 30);
+    }#Inglês:hover{
+        background-color: rgb(0, 143, 0);
+    }#Geografia:hover{
+        background-color: rgb(136, 24, 24);
+    }
+    #Redação:hover{
+        background-color: rgb(3, 202, 159);
+    }#Filosofia:hover{
+        background-color: rgb(189, 176, 0);
+    }#Sociologia:hover{
+        background-color: rgb(255, 0, 255);
+    }
+    #menu_vestibular{
+    border: solid 1px rgb(210, 210, 210);
+    background-color: rgb(250, 250, 250);
+    }
+    #menu_matérias{
+        background-color: rgb(250, 250, 250);
+    }
+    
+    #portugues:hover{
+        background-color: rgb(255, 79, 79);
+    }
+    #matematica:hover{
+        background-color: rgb(70, 70, 255);
+    }
+    #historia:hover{
+        background-color: rgb(255, 255, 68);
+    }#Biologia:hover{
+        background-color: rgb(0, 255, 0);
+    }#Quimica:hover{
+        background-color: rgb(172, 3, 172);
+    }#Física:hover{
+        background-color: rgb(255, 176, 30);
+    }#Inglês:hover{
+        background-color: rgb(0, 143, 0);
+    }#Geografia:hover{
+        background-color: rgb(136, 24, 24);
+    }
+    #Redação:hover{
+        background-color: rgb(3, 202, 159);
+    }#Filosofia:hover{
+        background-color: rgb(189, 176, 0);
+    }#Sociologia:hover{
+        background-color: rgb(255, 0, 255);
+    }
+    */
