@@ -37,7 +37,7 @@ else{
                     <label> Senha: <input type="password" name="password" value="<?= $row['password'] ?>"> </label>
                 </div>
 
-                <button type="submit" class="btn btn-primary btn-sm"> Salvar </button>
+                <button type="submit" class="btn botaoUsers btn-sm"> Salvar </button>
             </form>
         </div>
     </div>

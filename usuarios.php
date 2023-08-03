@@ -1,6 +1,5 @@
-
-<?php 
-    require('header.php');
+<?php
+require('header.php');
 ?>
 
 <?php
@@ -19,35 +18,40 @@ $rows = mysqli_fetch_all($result, MYSQLI_ASSOC);
 ?>
 
 <!-- verificar se retornou os registros do BD -->
-    <?php if (count($rows)): ?>
+<?php if (count($rows)): ?>
 
-        <table>
+    <table class="table tabela">
+        <tr>
+            <th> Usuarios cadastrados </th>
+            <th>Senha</th>
+            <th colspan="2"> Ações </th>
+        </tr>
+        <?php foreach ($rows as $row): ?>
             <tr>
-                <th> Usuarios cadastrados </th>
-                <th>Senha</th>
-                <th colspan="2"> Ações </th>
+                <td>
+                    <?= $row['name'] ?>
+                </td>
+                <td>
+                    <?= $row['password'] ?>
+                </td>
+                <td> <a href="form.php?id=<?= $row['id'] ?>">Editar </a> </td>
+                <td> <a href="delete.php?id=<?= $row['id'] ?>"> Apagar </a> </td>
             </tr>
-            <?php foreach ($rows as $row): ?>
-                <tr>
-                    <td>
-                        <?= $row['name'] ?>
-                    </td>
-                    <td>
-                        <?= $row['password'] ?>
-                    </td>
-                    <td> <a href="form.php?id=<?= $row['id'] ?>"> Editar </a> </td>
-                    <td> <a href="delete.php?id=<?= $row['id'] ?>"> Apagar </a> </td>
-                </tr>
-            <?php endforeach ?>
-        </table>
+        <?php endforeach ?>
+    </table>
+
     <?php else: ?>
         <p>Não possui bloco de código</p>
     <?php endif ?>
     <!-- redereciona para tela de cadastro -->
-    <a href="form.php">Cadastrar</a>
-    <a href="index.php">Home</a>
+    <a href="form.php">
+        <button class="btn btn-sm">Cadastrar</button>
+    </a>
+    <a href="index.php">
+        <button class="btn btn-sm">Home</button>
+    </a>
 
 
-    <?php 
-        require('footer.php');
+    <?php
+    require('footer.php');
     ?>

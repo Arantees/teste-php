@@ -49,10 +49,10 @@
                 >
                   <ul class="navbar-nav justify-content-around w-100">
                     <li class="nav-item active txt-preto">
-                      <a class="nav-link text-black" href="Index.html"> Home</a>
+                      <a class="nav-link text-black" href="Index.php"> Home</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link text-black" href="Como_estudar.html">
+                      <a class="nav-link text-black">
                         Como Estudar
                       </a>
                     </li>
