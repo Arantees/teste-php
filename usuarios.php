@@ -19,12 +19,13 @@ $rows = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
 <!-- verificar se retornou os registros do BD -->
 <?php if (count($rows)): ?>
-
-    <table class="table tabela">
+    <div class="min-vh-100">
+    <table class="table mt-5">
         <tr>
             <th> Usuarios cadastrados </th>
-            <th>Senha</th>
-            <th colspan="2"> Ações </th>
+            <th>Senha </th>
+            <th> Editar </th>
+            <th> Deletar</th>
         </tr>
         <?php foreach ($rows as $row): ?>
             <tr>
@@ -34,24 +35,24 @@ $rows = mysqli_fetch_all($result, MYSQLI_ASSOC);
                 <td>
                     <?= $row['password'] ?>
                 </td>
-                <td> <a href="form.php?id=<?= $row['id'] ?>">Editar </a> </td>
-                <td> <a href="delete.php?id=<?= $row['id'] ?>"> Apagar </a> </td>
-            </tr>
+                <td> <a href="form.php?id=<?= $row['id'] ?>"><button class=" btn-edit btn-outline"> <i class="fa-solid fa-pencil"></i> </button> </a> </td>
+                <td> <a href="delete.php?id=<?= $row['id'] ?>"><button class="btn-delete btn-outline"> <i class="fa-solid fa-trash-can"></i></i></button></a> </td>
+        </tr>
         <?php endforeach ?>
     </table>
 
-    <?php else: ?>
-        <p>Não possui bloco de código</p>
-    <?php endif ?>
-    <!-- redereciona para tela de cadastro -->
-    <a href="form.php">
-        <button class="btn btn-sm">Cadastrar</button>
-    </a>
-    <a href="index.php">
-        <button class="btn btn-sm">Home</button>
-    </a>
+<?php else: ?>
+    <p>Não possui bloco de código</p>
+<?php endif ?>
+<!-- redereciona para tela de cadastro -->
 
-
-    <?php
-    require('footer.php');
-    ?>
+<div class="container text-center tamanhoTexto">
+    <a href="form.php"><button type="button" class="btn-usuario btn-lg">Cadastrar</button></a>
+    <a href="index.php"><button type="button" class="btn-usuario btn-lg">Home</button></a>
+</div>
+</div>
+<div>
+<?php
+require('footer.php');
+?>
+</div>

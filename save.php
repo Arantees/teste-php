@@ -5,7 +5,10 @@
     require_once ('db.php');
     $name = $_POST['name'];
     $password = $_POST ['password'];
-    
+    if($name=='' || $password==''){
+        header("location: form.php?error=". urlencode("Usuário ou senha em branco"));
+        return;
+    }
     // isset serve para verificar se a posição existe no array, e precisa ter um && ! para verificar se tem valor valido.
     // adicionar dados a tabela
     // utilizar empty( variavel) para verificar se esta vazio

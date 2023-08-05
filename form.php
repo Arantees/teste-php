@@ -18,13 +18,15 @@ if(isset($_GET['id'])){
  $row = $rows[0];
  // var_dump($rows);
 }
+ 
 else{
     $row=['name'=>'', 'password'=> '', 'id'=> ''];
     $id = '';
 }
 ?>
-
+<div class="min-vh-100">
 <section id="formulario">
+    <div class="container">
     <div class="row align-items-center justify-content-center">
         <div class="col-auto">
             <form action="save.php" method="POST" class="text-right">
@@ -41,9 +43,12 @@ else{
             </form>
         </div>
     </div>
-
+    </div>
+    <?php if (isset($_GET['error'])): ?>
+    <p class="text-center mt-5 text-erro"><?= $_GET['error'] ?> </p>
+    <?php endif ?>
 </section>
-
+</div>
 <?php
 require('footer.php');
 ?>
